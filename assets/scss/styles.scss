@@ -1,3 +1,6 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
 *,
 *::before,
 *::after {
@@ -25,5 +28,31 @@ img {
 
 main {
   width: 100vw;
-  margin: 0 auto;
+  @include f-column;
+  justify-content: center;
+  align-items: center;
+}
+
+// !credit card section
+
+.credit-card {
+  background: url("../img/creditcard.png") no-repeat center;
+  height: 200px;
+  width: 370px;
+  @include f-column;
+  justify-content: space-between;
+  article {
+    margin: 1rem;
+    @include f-row;
+    align-items: center;
+    justify-content: space-between;
+    .chip {
+      width: 35px;
+      height: 35px;
+    }
+    .visa {
+      width: 35px;
+      height: 35px;
+    }
+  }
 }
