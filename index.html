@@ -8,6 +8,37 @@
     <title>CreditCard</title>
   </head>
   <body>
-    <main></main>
+    <main>
+      <section class="credit-card">
+        <article>
+          <img src="./assets/img/chip.png" alt="chip" />
+          <img src="./assets/img/visa.png" alt="visa" />
+        </article>
+        <h2 data-js="card-number-output">#### #### #### ####</h2>
+        <article>
+          <div class="headlines">
+            <h4>Card Holder</h4>
+            <h4>Expires</h4>
+          </div>
+          <div class="outputs">
+            <h3 data-js="card-name-output">FULL NAME</h3>
+            <h3 data-js="card-date-output">MM/YY</h3>
+          </div>
+        </article>
+      </section>
+      <section>
+        <form onsubmit="dataSubmit(); return false">
+          <label for="card-number"></label>
+          <input type="number" id="card-number" data-js="card-number" />
+          <label for="card-holder"></label>
+          <input type="text" id="card-holder" data-js="card-holder" />
+          <label for="card-date"></label>
+          <input type="date" id="card-date" data-js="card-date" />
+          <label for="card-cvv"></label>
+          <input type="number" id="card-cvv" data-js="card-cvv" />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </main>
   </body>
 </html>
