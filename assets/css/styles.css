@@ -42,8 +42,7 @@ main {
 .credit-card {
   margin-top: 6rem;
   background: url("../img/creditcard.png") no-repeat center;
-  height: 200px;
-  width: 370px;
+  min-width: 200px;
   opacity: 1;
   z-index: 10;
   background-color: white;
@@ -70,7 +69,7 @@ main {
 
 .form-section {
   width: 40vw;
-  min-width: 420px;
+  min-width: 280px;
   height: 400px;
   box-shadow: 0px 0px 20px 0px #afafaf;
   border-radius: 10px;
