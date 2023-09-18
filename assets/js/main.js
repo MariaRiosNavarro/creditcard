@@ -50,12 +50,12 @@ function dataSubmit() {
 
 document.getElementById("card-number").addEventListener("input", function (e) {
   let input = e.target;
-  let value = input.value.replace(/\D/g, ""); // Entferne Nicht-Ziffern
-  input.value = value.substring(0, 19); // Begrenze auf 16 Zeichen
+  let value = input.value.replace(/\D/g, ""); // Remove non-digits
+  input.value = value.substring(0, 19); // Limit to 19 characters
 });
 
 document.getElementById("card-cvv").addEventListener("input", function (e) {
   let input = e.target;
-  let value = input.value.replace(/\D/g, ""); // Entferne Nicht-Ziffern
-  input.value = value.substring(0, 3); // Begrenze auf 3 Zeichen
+  let value = input.value.replace(/\D/g, ""); // Remove non-digits
+  input.value = value.substring(0, 3); // Limit to 3 characters
 });
