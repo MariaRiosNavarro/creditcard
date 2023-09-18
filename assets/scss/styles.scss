@@ -1,5 +1,13 @@
 @import "./variables.scss";
 @import "./mixin.scss";
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: Roboto-Light;
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
+}
 
 *,
 *::before,
@@ -36,11 +44,17 @@ main {
 // !credit card section
 
 .credit-card {
+  margin-top: 6rem;
   background: url("../img/creditcard.png") no-repeat center;
   height: 200px;
   width: 370px;
+  opacity: 1;
+  z-index: 10;
+
+  background-color: white;
   @include f-column;
   justify-content: space-between;
+  border-radius: 5px;
   article {
     margin: 1rem;
     @include f-row;
@@ -55,4 +69,60 @@ main {
       height: 35px;
     }
   }
+}
+
+// form section
+
+.form-section {
+  width: 40vw;
+  min-width: 420px;
+  height: 400px;
+  box-shadow: 0px 0px 20px 0px #afafaf;
+  border-radius: 10px;
+  position: relative;
+  top: -7rem;
+}
+
+form {
+  margin-top: 10rem;
+  width: 100%;
+  padding: 5rem;
+}
+
+label:nth-of-type(1),
+label:nth-of-type(2),
+input:nth-of-type(1),
+input:nth-of-type(2) {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  @include f-row;
+  justify-content: space-between;
+  .sub-wrapper {
+    @include f-column;
+  }
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 1rem auto;
+  background-color: #e5696b;
+  border-radius: 5px;
+  width: 160.8px;
+  height: 35.2px;
+  color: white;
+  border: none;
+}
+
+label,
+input,
+h4 {
+  font-family: RobotoLight, Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }

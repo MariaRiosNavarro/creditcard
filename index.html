@@ -30,14 +30,20 @@
       </section>
       <section class="form-section">
         <form onsubmit="dataSubmit(); return false">
-          <label for="card-number"></label>
+          <label for="card-number">Card Number</label>
           <input type="number" id="card-number" data-js="card-number" />
-          <label for="card-holder"></label>
+          <label for="card-holder">Card Holder</label>
           <input type="text" id="card-holder" data-js="card-holder" />
-          <label for="card-date"></label>
-          <input type="date" id="card-date" data-js="card-date" />
-          <label for="card-cvv"></label>
-          <input type="number" id="card-cvv" data-js="card-cvv" />
+          <div class="wrapper">
+            <div class="sub-wrapper">
+              <label for="card-date">Expiration Date</label>
+              <input type="date" id="card-date" data-js="card-date" />
+            </div>
+            <div class="sub-wrapper">
+              <label for="card-cvv">CVV</label>
+              <input type="number" id="card-cvv" data-js="card-cvv" />
+            </div>
+          </div>
           <input type="submit" value="Submit" />
         </form>
       </section>
